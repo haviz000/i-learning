@@ -16,8 +16,19 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = "users"; 
+
+    public function kelas(){
+        return $this->hasOne('App\Models\kelas');
+    }
     protected $fillable = [
         'name',
+        'nim',
+        'jurusan',
+        'tglhr',
+        'nilaiDw',
+        'nilaiIot',
+        'nilaiNetwork',
         'email',
         'password',
     ];

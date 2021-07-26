@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="{{ asset('css/styleUser.css') }}">
   </head>
   <body>
-        
         <div class="wrapper d-flex align-items-stretch">
             <nav id="sidebar">
                 <div class="custom-menu">
@@ -26,8 +25,8 @@
               <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kelas</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                    <a href="{{ route('user.iot') }}">Internet To Thing</a>
+               <li>
+                    <a href="{{ route('user.iot') }}">Internet Of Things</a>
                 </li>
                 <li>
                     <a href="{{ route('user.dw') }}">Data WareHouse</a>
@@ -38,20 +37,16 @@
                 </ul>
               </li>
               <li>
-                  <a href="{{ route('user.nilai') }}">Nilai</a>
+                  <a href="{{ route('user.qr') }}">Nilai</a>
               </li>
-              <li>
-                <a href="{{ route('user.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="font-style: oblique;">Logout</a>
-                <form action="{{ route('user.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
-              </li>
-            </ul>
-
-            <div class="mb-5">
-
-            </div>
-
+             <li>
+                 <a href="{{ route('user.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="font-style: oblique;">Logout</a>
+                <form action="{{ route('user.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>   
+             </li>
+            </ul>          
           </div>
         </nav>
+        
 
         <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5 " align="center">
@@ -62,5 +57,6 @@
     <script src="{{ asset('js/popper.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    @include('sweetalert::alert')
   </body>
 </html>

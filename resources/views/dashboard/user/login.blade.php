@@ -20,15 +20,16 @@
 					<div class="wrap d-md-flex">
 						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 							<div class="text w-100">
-								<h2>Welcome to I-Learning</h2>
-								<p>Don't have an account?</p>
-								<a href="{{ route('user.register') }}" class="btn btn-white btn-outline-white">Sign Up</a>
+								<h2>I-Learning</h2>
+								{{-- <img src="{{ asset('img/33.png') }}" style="width:500px;" class=" p-5"> --}}
+								<p>Are you lecturer ?</p>
+								<a href="{{ route('lecturer.login') }}" class="btn btn-white btn-outline-white">Sign Up as lecturer</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
-			      			<h3 class="mb-4">Log In</h3>
+			      			<h3 class="mb-4">Log In For Student</h3>
 			      		</div>
 			      	</div>
 							<form class="signin-form" action="{{ route('user.check') }}" method="post" autocomplete="off">

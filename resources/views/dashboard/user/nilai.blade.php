@@ -10,6 +10,8 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
+					<a href="{{ route('user.printpdf') }}" target="_blank" class="btn btn-success p-2 mb-3">Generate PDF <i class="fa fa-download" aria-hidden="true"></i>
+</a>
 					<div class="table-wrap">
 						<table class="table">
 						  <thead class="thead-primary">
@@ -23,37 +25,42 @@
 						    </tr>
 						  </thead>
 						  <tbody>
+						  @foreach($nilai as $value)
 						    <tr>
 						      <th scope="row">1</th>
-						      <td>CCS210</td>
-						      <td>Internet Of thing</td>
-						      <td>KJ002</td>
+						      <td>CCSU210</td>
+						      <td>internet of thing</td>
+						      <td> 	KJ002</td>
 						      <td>3</td>
-						      <td>A</td>
-						    </tr>
-						    <tr>
+						      <td>{{ $value->nilaiIot}}</td>
+						     </tr>
+						     <tr>
 						      <th scope="row">2</th>
-						      <td>UNV104</td>
+						      <td>GGH889</td>
 						      <td>Data Warehouse</td>
-						      <td>KJ006</td>
+						      <td>KJ001</td>
 						      <td>3</td>
-						      <td>A-</td>
-						    </tr>
-						    <tr>
-						    	<th scope="row">3</th>
-						     <td>CTI210</td>
+						      <td>{{ $value->nilaiDw}}</td>
+						      </tr>
+						      <tr>
+						      <th scope="row">3</th>
+						      <td>CFD456</td>
 						      <td>Network</td>
 						      <td>KJ001</td>
 						      <td>3</td>
-						      <td>B+</td>
-						    </tr>
+						      <td>{{ $value->nilaiNetwork}}</td>
+						      </tr>
+						      @endforeach
+						      
+							  
+						   
+						    
 						  </tbody>
 						</table>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h3>Scan Here</h3>
-			<i class="fa fa-qrcode" aria-hidden="true" style="font-size: 100px;"></i>
+			{{-- <i class="fa fa-qrcode" aria-hidden="true" style="font-size: 100px;"></i> --}}
 	</section>
 @endsection

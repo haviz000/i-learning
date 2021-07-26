@@ -47,9 +47,18 @@
 				</div>
 			@endif
 			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">NIM</label>
-			      			<input type="text" input id="name" class="form-control form-control @error('name') is-invalid @enderror" placeholder="nim" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+			      			<label class="label" for="name">Nama</label>
+			      			<input type="text" input id="name" class="form-control form-control @error('name') is-invalid @enderror" placeholder="nama" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 			      										@error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+			      		</div>
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="name">NIM</label>
+			      			<input type="text" input id="nim" class="form-control form-control @error('nim') is-invalid @enderror" placeholder="nim" name="nim" value="{{ old('nim') }}" required autocomplete="nim" autofocus>
+			      										@error('nim')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

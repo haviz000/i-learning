@@ -17,6 +17,14 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
+    'admin'=>[
+       'driver'=>'eloquent',
+       'model'=>App\Models\Admin::class,
+    ],
+    'lecturer'=>[
+        'driver'=>'eloquent',
+        'model'=>App\Models\Lecturer::class,
+     ],
 
     /*
     |--------------------------------------------------------------------------
@@ -46,6 +54,14 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'admin'=>[
+           'driver'=>'session',
+           'provider'=>'admins',
+        ],
+        'lecturer'=>[
+            'driver'=>'session',
+            'provider'=>'lecturers',
+         ],
     ],
 
     /*
@@ -75,6 +91,14 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'admins'=>[
+           'driver'=>'eloquent',
+           'model'=>App\Models\Admin::class,
+        ],
+        'lecturers'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Lecturer::class,
+         ],
     ],
 
     /*
@@ -99,6 +123,14 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'admins'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Admin::class,
+        ],
+        'lecturers'=>[
+            'driver'=>'eloquent',
+            'model'=>App\Models\Lecturer::class,
+        ]
     ],
 
     /*
